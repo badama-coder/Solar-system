@@ -12,3 +12,43 @@ body{
 .image-center{
     background: var(--backimg) center/cover no-repeat;
 }
+.sun   {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.solar-system{
+    position: relative;
+    width: 900px;
+    height: 900px;
+}
+.planet{
+    width: var(--planet-width);
+    height: var(--planet-width);
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: orbit var(--planet-s) infinite linear;
+}
+.orbit{
+    border: 1px white dashed;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: var(--width);
+    height: var(--width);
+    animation: orbit var(--orbit-s) infinite linear;
+}
+@keyframes orbit{
+    from{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
